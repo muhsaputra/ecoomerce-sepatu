@@ -1,6 +1,6 @@
-import InputForm from "../Elements/Input/index";
+import InputForm from "../Elements";
 import { useEffect, useRef, useState } from "react";
-import Button from "../Elements/Button/buttonIndex";
+import Button from "../Elements/buttonIndex";
 import "react-toastify/dist/ReactToastify.css";
 import { login } from "../../services/auth.service";
 
