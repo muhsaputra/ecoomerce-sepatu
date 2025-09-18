@@ -1,6 +1,6 @@
-import InputForm from "../Elements/input/";
+import InputForm from "../Elements";
 import { useEffect, useRef, useState } from "react";
-import Button from "../Elements/Button/buttonIndex";
+import Button from "../Elements/buttonIndex";
 import "react-toastify/dist/ReactToastify.css";
 import { login } from "../../services/auth.service";
 
@@ -10,13 +10,11 @@ const FormLogin = () => {
   // Handle login
   const handleLogin = (event) => {
     event.preventDefault();
-    // localStorage.setItem("email", event.target.email.value);
-    // localStorage.setItem("password", event.target.password.value);
-    // window.location.href = "/";
     const data = {
       username: event.target.username.value,
       password: event.target.password.value,
     };
+
     login(data, (status, res) => {
       if (status) {
         localStorage.setItem("token", res);
@@ -35,7 +33,7 @@ const FormLogin = () => {
 
   return (
     <form onSubmit={handleLogin}>
-      {/* Email Form */}
+      {/* Username Form */}
       <InputForm
         label="Username"
         type="text"
