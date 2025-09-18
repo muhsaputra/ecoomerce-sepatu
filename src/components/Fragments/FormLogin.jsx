@@ -1,4 +1,4 @@
-import InputForm from "../Elements";
+import InputForm from "../Elements/Input/index";
 import { useEffect, useRef, useState } from "react";
 import Button from "../Elements/Button/buttonIndex";
 import "react-toastify/dist/ReactToastify.css";
